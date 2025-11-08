@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>แผนที่ผู้ป่วยในพื้นที่</title>
+  <title>แผนที่ข้อมูลตำแหน่งที่ตั้ง</title>
   <link rel="stylesheet" href="style.css" />
   <link
     rel="stylesheet"
@@ -13,13 +13,15 @@
 </head>
 <body>
   <header>
-    <h1>แผนที่ผู้ป่วยในพื้นที่</h1>
+    <h1>แผนที่ข้อมูลตำแหน่งที่ตั้ง (Location Data)</h1>
     <nav>
       <button class="filter-btn active" data-type="ทั้งหมด">ทั้งหมด</button>
-      <button class="filter-btn" data-type="ติดบ้าน">ผู้ป่วยติดบ้าน</button>
-      <button class="filter-btn" data-type="ติดเตียง">ผู้ป่วยติดเตียง</button>
-      <button class="filter-btn" data-type="พิการ">ผู้ป่วยพิการ</button>
-    </nav>
+      <button class="filter-btn" data-type="จุดเสี่ยง">จุดเสี่ยง</button>
+      <button class="filter-btn" data-type="สาธารณะ">สาธารณะ</button>
+      <button class="filter-btn" data-type="บริษัท">บริษัท</button>
+      <button class="filter-btn" data-type="โรงงาน">โรงงาน</button>
+      <button class="filter-btn" data-type="โรงเรียน">โรงเรียน</button>
+      </nav>
   </header>
 
   <div id="map"></div>

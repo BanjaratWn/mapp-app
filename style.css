@@ -10,6 +10,8 @@ header {
   padding: 15px 20px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  position: relative;
 }
 
 header h1 {
@@ -19,6 +21,11 @@ header h1 {
 
 nav {
   margin-top: 10px;
+  /* เพิ่มส่วนนี้เพื่อให้ปุ่มตัดบรรทัดได้ */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 
 .filter-btn {
@@ -27,7 +34,7 @@ nav {
   border: 1px solid #007bff;
   border-radius: 5px;
   padding: 6px 12px;
-  margin: 3px;
+  /* margin: 3px; (ใช้ gap แทน) */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -40,6 +47,28 @@ nav {
 
 #map {
   width: 100%;
+  /* คำนวณความสูงโดยลบความสูงของ header (ปรับค่า 120px ได้ตามความสูงจริงของ header) */
   height: calc(100vh - 120px);
-  margin-top: 10px;
+  /* แก้ไข z-index ให้น้อยกว่า header */
+  z-index: 1;
+  /* จัดตำแหน่ง map ให้อยู่ใต้ header */
+  position: absolute;
+  top: 120px; 
+  left: 0;
+}
+
+/* ปรับแก้ layout สำหรับ #map ให้ถูกต้อง */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    flex-shrink: 0; /* ไม่ให้ header หด */
+}
+#map {
+    flex-grow: 1; /* ให้ map ขยายเต็มพื้นที่ที่เหลือ */
+    position: relative; /* ลบ absolute ออก */
+    top: 0; /* รีเซ็ตค่า */
+    height: auto; /* ให้ flexbox จัดการความสูง */
 }
