@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  background: #f4f6f8;
+}
+
+header {
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+.filter-btn {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 120px); /* ปรับความสูงของแผนที่ให้เหมาะสม */
+  margin-top: 10px;
+}

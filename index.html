@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapData</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>ข้อมูลแผนที่</h1>
+    <nav>
+      <button class="filter-btn active" data-type="ทั้งหมด">ทั้งหมด</button>
+      <button class="filter-btn" data-type="โรงเรียน">โรงเรียน</button>
+      <button class="filter-btn" data-type="โรงพยาบาล">โรงพยาบาล</button>
+      <button class="filter-btn" data-type="วัด">วัด</button>
+    </nav>
+  </header>
+
+  <div id="map"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
